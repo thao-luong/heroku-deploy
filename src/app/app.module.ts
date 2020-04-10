@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
+import { MatTabsModule } from '@angular/material/tabs';
 
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers';
@@ -88,7 +89,7 @@ import { AttributeFilterDefinitionByURIComponent } from './components/attribute-
 import { DateFilterConfigComponent } from './components/date-filter-config/date-filter-config.component';
 import { DateFilterComponent } from './routes/date-filter/date-filter.component';
 import { DateFilterConfigExampleComponent } from './components/date-filter-config-example/date-filter-config-example.component';
-import { DateFilterVisComponent } from './components/date-filter-vis/date-filter-vis.component';
+import { DateFilterVisComponent } from './visualizations/visualization-date-filter/visualization-date-filter.component';
 import { AdvancedUseCasesComponent } from './routes/advanced-use-cases/advanced-use-cases.component';
 import { GlobalFiltersComponent } from './routes/global-filters/global-filters.component';
 import { GlobalFiltersExampleComponent } from './components/global-filters-example/global-filters-example.component';
@@ -117,7 +118,7 @@ import { MeasureValueFilterPercentDropdownComponent } from './components/measure
 import { ExampleWithExportComponent } from './components/utils/example-with-export/example-with-export.component';
 import { PivotTableExportExampleComponent } from './components/pivot-table-export-example/pivot-table-export-example.component';
 import { HeadlineExportExampleComponent } from './components/headline-export-example/headline-export-example.component';
-import { VisualizationColumnChartExportExampleComponent } from './components/visualization-column-chart-export-example/visualization-column-chart-export-example.component';
+import { VisualizationColumnChartExportExampleComponent } from './visualizations/visualization-column-chart-export-example/visualization-column-chart-export-example.component';
 import { TableExportExampleComponent } from './components/table-export-example/table-export-example.component';
 import { BarChartExportExampleComponent } from './components/bar-chart-export-example/bar-chart-export-example.component';
 import { ExportChartComponent } from './routes/export-chart/export-chart.component';
@@ -137,7 +138,8 @@ import { DualAxisColumnChartComponent } from './components/dual-axis-column-char
 import { DualAxisBarChartComponent } from './components/dual-axis-bar-chart/dual-axis-bar-chart.component';
 import { ColumnChartConfigComponent } from './components/column-chart-config/column-chart-config.component';
 import { PieChartWithColorMappingComponent } from './components/pie-chart-with-color-mapping/pie-chart-with-color-mapping.component';
-import { ChartConfigComponentsComponent } from './routes/chart-config-components/chart-config-components.component'
+import { ChartConfigComponentsComponent } from './routes/chart-config-components/chart-config-components.component';
+import { ExampleWithSourceComponent } from './components/utils/example-with-source/example-with-source.component'
 
 @NgModule({
     imports: [
@@ -152,6 +154,7 @@ import { ChartConfigComponentsComponent } from './routes/chart-config-components
         ReactiveFormsModule,
         HttpClientModule,
         AppRouting,
+        MatTabsModule,
         RouterModule.forRoot([{
             path: '', redirectTo: '/basic-components', pathMatch: 'full'
         }])
@@ -277,7 +280,8 @@ import { ChartConfigComponentsComponent } from './routes/chart-config-components
         DualAxisBarChartComponent,
         ColumnChartConfigComponent,
         PieChartWithColorMappingComponent,
-        ChartConfigComponentsComponent
+        ChartConfigComponentsComponent,
+        ExampleWithSourceComponent
         
     ],
     providers: [
@@ -288,7 +292,96 @@ import { ChartConfigComponentsComponent } from './routes/chart-config-components
         // provider used to create fake backend
         fakeBackendProvider
     ],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
+    entryComponents: [
+        KpiComponent,
+        HeadlineComponent,
+        PieChartComponent,
+        TableComponent,
+        BarChartComponent,
+        ColumnChartComponent,
+        LineChartComponent,
+        LineChartHasSegmentByComponent,
+        AreaChartComponent,
+        AreaChartHasColorPaletteComponent,
+        ComboChartComponent,
+        HeatMapComponent,
+        TreemapComponent,
+        DonutChartComponent,
+        ScatterPlotComponent,
+        BubbleChartComponent,
+        DualColumnChartComponent,
+        PieChartColorMappingComponent,
+        BulletChartComponent,
+        BulletChartHasAmMeasureComponent,
+        BulletChartHasMeasureValueFilterComponent,
+        ArithmeticMeasuresRatioComponent,
+        ArithmeticMeasureChangeComponent,
+        ArithmeticMeasureSumComponent,
+        ArithmeticMeasureMultiplicationComponent,
+        ArithmeticMeasureDrillingComponent,
+        AttributeFilterComponent,
+        AttributeFilterExampleComponent,
+        NewAttributeFilterComponent,
+        AttributeFilterDefinitionByURIComponent,
+        BarchartConfigComponent,
+        DualAxisColumnChartComponent,
+        DualAxisBarChartComponent,
+        ColumnChartConfigComponent,
+        PieChartWithColorMappingComponent,
+        DateFilterConfigComponent,
+        DateFilterConfigExampleComponent,
+        DateFilterVisComponent,
+        DatePickerComponent,
+        MonthPickerComponent,
+        TableDrillExampleComponent,
+        DrillWithExternalDataComponent,
+        BarChartExportExampleComponent,
+        HeadlineExportExampleComponent,
+        PivotTableExportExampleComponent,
+        TableExportExampleComponent,
+        VisualizationColumnChartExportExampleComponent,
+        MeasureValueFilterExamplesComponent,
+        MeasureValueFilterShownInPercentComponent,
+        MeasureValueFilterStackTo100PercentComponent,
+        MeasureValueFilterFormattedInPercentComponent,
+        GlobalFiltersExampleComponent,
+        MeasureValueFilterDropdownComponent,
+        MeasureValueFilterRatioDropdownComponent,
+        MeasureValueFilterPercentDropdownComponent,
+        ParentFilterExampleComponent,
+        PivotTableComponent,
+        PivotTableTotalsComponent,
+        PivotTableDrillExampleComponent,
+        PivotTableSizingComponent,
+        ResponsiveExampleComponent,
+        SaveAsDashboardComponent,
+        MeasureSortingExampleComponent,
+        AttributeSortingExampleComponent,
+        DynamicSortingComponent,
+        SamePeriodColumnChartExampleComponent,
+        PreviousPeriodColumnChartExampleComponent,
+        PreviousPeriodHeadLineExampleComponent,
+        VisualizationAreaChartComponent,
+        VisualizationPivotTableComponent,
+        VisualizationBarChartComponent,
+        VisualizationColumnChartComponent,
+        VisualizationLineChartComponent,
+        VisualizationTreemapByIdentifierComponent,
+        VisualizationHeatmapByIdentifierComponent,
+        VisualizationPieChartByIdentifierComponent,
+        VisualizationDonutChartByIdentifierComponent,
+        VisualizationBulletChartByIdentifierComponent,
+        VisualizationAreaChartByUriComponent,
+        VisualizationColumnChartByUriComponent,
+        VisualizationLineChartByUriComponent,
+        VisualizationHeadlineByUriComponent,
+        VisualizationBubbleChartByUriComponent,
+        VisualizationScatterPlotByUriComponent,
+        VisualizationPieChartByUriComponent,
+        VisualizationDonutChartByUriComponent,
+        VisualizationBulletChartByUriComponent
+    ]
 })
 
 export class AppModule { }

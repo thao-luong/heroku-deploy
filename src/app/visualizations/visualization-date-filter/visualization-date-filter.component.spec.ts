@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { DateFilterVisComponent } from './date-filter-vis.component';
+import { DateFilterVisComponent } from './visualization-date-filter.component';
 
 describe('DateFilterVisComponent', () => {
   let component: DateFilterVisComponent;

@@ -30,37 +30,11 @@
                         <p>
                           These are the examples of the generic Visualization component that uses identifier to identify insights.
                         </p>
-                    </div>                    
-                    <h3>Area Chart</h3> 
-                    <app-visualization-area-chart></app-visualization-area-chart>
-
-                    <h3>Pivot Table</h3> 
-                    <app-visualization-pivot-table></app-visualization-pivot-table>
-
-                    <h3>Bar Chart</h3> 
-                    <app-visualization-bar-chart></app-visualization-bar-chart>
-
-                    <h3>Column Chart</h3> 
-                    <app-visualization-column-chart></app-visualization-column-chart>
-                    
-                    <h3>Line Chart</h3> 
-                    <app-visualization-line-chart></app-visualization-line-chart>
-
-                    <h3>Treemap</h3>
-                    <app-visualization-treemap-by-identifier></app-visualization-treemap-by-identifier>
-                    
-                    <h3>Heatmap</h3>
-                    <app-visualization-heatmap-by-identifier></app-visualization-heatmap-by-identifier>
-                    
-                    <h3>Pie Chart</h3>
-                    <app-visualization-pie-chart-by-identifier></app-visualization-pie-chart-by-identifier>
-                    
-                    <h3>Donut Chart</h3>
-                    <app-visualization-donut-chart-by-identifier></app-visualization-donut-chart-by-identifier>
-
-                    <h3>Bullet Chart</h3>
-                    <app-visualization-bullet-chart-by-identifier></app-visualization-bullet-chart-by-identifier>
-                    
+                    </div>           
+                    <div *ngFor="let item of visualizationByIdentifierComponentArray"> 
+                        <h3>{{ item.title }}</h3>
+                        <app-example-with-source [for]='item.for' [ts]='item.ts' [html]='item.html' [css]='item.css'></app-example-with-source>
+                    </div>
                 </div>
             </div>
         </mat-sidenav-content>

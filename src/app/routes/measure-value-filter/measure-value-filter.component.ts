@@ -11,5 +11,4 @@ export class MeasureValueFilterComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

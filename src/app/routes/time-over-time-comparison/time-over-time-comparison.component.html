@@ -23,15 +23,10 @@
                 <h2>Time Over Time Comparison</h2>
                 <p>These examples show how to configure visual components like column charts or headlines to show data compared to the previous period or to the same period of the previous year.</p> 
                 <hr className="separator"/>
-
-                <h3>Comparing to the same period previous year</h3>
-                <app-same-period-column-chart-example></app-same-period-column-chart-example>
-
-                <h3>Comparing to the previous period with Column chart</h3>
-                <app-previous-period-column-chart-example></app-previous-period-column-chart-example>
-
-                <h3>Comparing to the previous period with Headline</h3>
-                <app-previous-period-headline-example></app-previous-period-headline-example>
+                <div *ngFor="let item of timeOverTimeComparisonComponentArray"> 
+                    <h3>{{ item.title }}</h3>
+                    <app-example-with-source [for]='item.for' [ts]='item.ts' [html]='item.html' [css]='item.css'></app-example-with-source>
+                </div>
             </div>
         </mat-sidenav-content>
     </mat-sidenav-container>

@@ -31,32 +31,10 @@
                           These are the examples of the generic Visualization component that uses URI to identify insights.
                         </p>
                     </div>
-                    <h3>Area Chart</h3> 
-                    <app-visualization-area-chart-by-uri></app-visualization-area-chart-by-uri>
-
-                    <h3>Stack Column Chart</h3> 
-                    <app-visualization-column-chart-by-uri></app-visualization-column-chart-by-uri>
-
-                    <h3>Line Chart</h3> 
-                    <app-visualization-line-chart-by-uri></app-visualization-line-chart-by-uri>
-
-                    <h3>Headline</h3>
-                    <app-visualization-headline-by-uri></app-visualization-headline-by-uri>
-
-                    <h3>Bubble Chart</h3>
-                    <app-visualization-bubble-chart-by-uri></app-visualization-bubble-chart-by-uri>
-                    
-                    <h3>Scatter Chart</h3>
-                    <app-visualization-scatter-chart-by-uri></app-visualization-scatter-chart-by-uri>
-                    
-                    <h3>Pie Chart</h3>
-                    <app-visualization-pie-chart-by-uri></app-visualization-pie-chart-by-uri>
-                    
-                    <h3>Donut Chart</h3>
-                    <app-visualization-donut-chart-by-uri></app-visualization-donut-chart-by-uri>
-
-                    <h3>Bullet Chart</h3>
-                    <app-visualization-bullet-chart-by-uri></app-visualization-bullet-chart-by-uri>
+                    <div *ngFor="let item of visualizationByUriComponentArray"> 
+                        <h3>{{ item.title }}</h3>
+                        <app-example-with-source [for]='item.for' [ts]='item.ts' [html]='item.html' [css]='item.css'></app-example-with-source>
+                    </div>
                 </div>
             </div>
         </mat-sidenav-content>

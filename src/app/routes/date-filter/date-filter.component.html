@@ -22,22 +22,13 @@
         <router-outlet></router-outlet>
         <h2>Date Filter Component</h2>
         <p>These examples show how to use the Date Filter component.</p>
-
-        <hr className="separator" />
-
-        <h3>Date Filter</h3>
-        <p>This example shows a full-featured date filter component.</p>
-
-        <app-date-filter-config></app-date-filter-config>
-
-        <h3> Filtering a report </h3>
-        <p>
-          This example shows how to add date filter component into a report. Presets and floating range form
-          is restricted to years.
-        </p>
-        <app-date-filter-config-example></app-date-filter-config-example>
-        
-        <h3> Apply date filter for Visualization</h3>
-        <app-date-filter-visualization-example></app-date-filter-visualization-example>
+        <hr class="separator"/>
+        <div class='example-wrapper'>
+          <div *ngFor="let item of dateFilterComponentArray"> 
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.content }}</p>
+            <app-example-with-source [for]='item.for' [ts]='item.ts' [html]='item.html' [css]='item.css'></app-example-with-source>
+          </div>
+        </div>
       </div>
     </mat-sidenav-content>
