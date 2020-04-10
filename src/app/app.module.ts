@@ -139,7 +139,9 @@ import { DualAxisBarChartComponent } from './components/dual-axis-bar-chart/dual
 import { ColumnChartConfigComponent } from './components/column-chart-config/column-chart-config.component';
 import { PieChartWithColorMappingComponent } from './components/pie-chart-with-color-mapping/pie-chart-with-color-mapping.component';
 import { ChartConfigComponentsComponent } from './routes/chart-config-components/chart-config-components.component';
-import { ExampleWithSourceComponent } from './components/utils/example-with-source/example-with-source.component'
+import { ExampleWithSourceComponent } from './components/utils/example-with-source/example-with-source.component';
+import { DynamicMeasureComponent } from './components/dynamic-measure/dynamic-measure.component';
+import { DynamicMeasureComponentComponent } from './routes/dynamic-measure-component/dynamic-measure-component.component';
 
 @NgModule({
     imports: [
@@ -281,7 +283,10 @@ import { ExampleWithSourceComponent } from './components/utils/example-with-sour
         ColumnChartConfigComponent,
         PieChartWithColorMappingComponent,
         ChartConfigComponentsComponent,
-        ExampleWithSourceComponent
+        ExampleWithSourceComponent,
+        DynamicMeasureComponent,
+        DynamicMeasureComponentComponent,
+
         
     ],
     providers: [
@@ -380,7 +385,8 @@ import { ExampleWithSourceComponent } from './components/utils/example-with-sour
         VisualizationScatterPlotByUriComponent,
         VisualizationPieChartByUriComponent,
         VisualizationDonutChartByUriComponent,
-        VisualizationBulletChartByUriComponent
+        VisualizationBulletChartByUriComponent,
+        DynamicMeasureComponent
     ]
 })
 

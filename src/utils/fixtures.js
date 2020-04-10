@@ -103,3 +103,5 @@ export const columnsVisualizationIdentifier = "aabOspdLbbvs";
 export const dualAxisBarVisualizationIdentifier = "acSoPx4Mc7Rr";
 export const totalCostsLocalIdentifier = "aaQHncjzfrtR";
 export const totalSalesLocalIdentifier = "c11c27a0b0314a83bfe5b64ab9de7b89";
+
+
