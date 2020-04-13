@@ -27,6 +27,7 @@ import { ExportTableComponent } from './routes/export-table/export-table.compone
 import { ExportVisualizationComponent } from './routes/export-visualization/export-visualization.component';
 import { DatepickerComponent } from './routes/datepicker/datepicker.component';
 import { ChartConfigComponentsComponent } from './routes/chart-config-components/chart-config-components.component';
+import { DynamicMeasureComponentComponent } from './routes/dynamic-measure-component/dynamic-measure-component.component';
 
 const appRoutes: Routes = [
     { path: '', component: BasicComponentsComponent , canActivate: [AuthGuard] },
@@ -54,6 +55,7 @@ const appRoutes: Routes = [
     { path: 'export/table', component: ExportTableComponent},
     { path: 'export/visualization', component: ExportVisualizationComponent},
     { path: 'advanced/date-picker', component: DatepickerComponent},
+    { path: 'advanced/dynamic-measures', component: DynamicMeasureComponentComponent},
 
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
