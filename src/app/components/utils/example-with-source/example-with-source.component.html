@@ -1,0 +1,19 @@
+<div style="margin-bottom: 10px;">
+  <ng-container #container></ng-container>
+</div>
+<button className="gd-button gd-button-secondary button-dropdown icon-right {{state.hidden ? 'icon-navigatedown' : 'icon-navigateup'}}" (click)="toggle()">
+    source code
+</button>
+<div style="font-size: 12px" [hidden]="state.hidden">
+    <mat-tab-group #tabGroup (selectedTabChange)="tabChange($event)">
+        <mat-tab label="TS">
+            <div [id]="rootDomIDSRC"></div>
+        </mat-tab>
+        <mat-tab label="HTML">
+            <div [id]="rootDomIDHTML"></div>
+        </mat-tab>
+        <mat-tab label="CSS">
+            <div [id]="rootDomIDCSS"></div>
+        </mat-tab>
+    </mat-tab-group>
+</div>

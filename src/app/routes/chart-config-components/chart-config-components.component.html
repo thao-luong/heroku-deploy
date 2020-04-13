@@ -29,33 +29,12 @@
                   <a class='gd-tab is-active' mat-list-item [routerLink]="'/advanced/chart-config-components'"> Chart Configuration </a>
                 </div>
                 <div class='example-wrapper'>
-                    <div>
-                        <h1>Customize chart bucket component</h1>
-                        <h2>Bar chart</h2>
-                        <hr class="separator">
-                    </div>
-                    <app-barchart-config></app-barchart-config>
-                    <div>
-                      <h2>Dual Axis Column chart</h2>
-                      <hr class="separator">
-                    </div>
-                    <app-dual-axis-column-chart></app-dual-axis-column-chart>
-                    <div>
-                      <h1>Customize chart visualization</h1>
-                      <h2>Dual Axis Bar chart</h2>
-                      <hr class="separator">
-                    </div>
-                    <app-dual-axis-bar-chart></app-dual-axis-bar-chart>
-                    <div>
-                      <h2>Column chart</h2>
-                      <hr class="separator">
-                    </div>
-                    <app-column-chart-config></app-column-chart-config>
-                    <div>
-                      <h1>Pie Chart with color mapping</h1>
-                      <hr class="separator">
-                    </div>
-                    <app-pie-chart-with-color-mapping></app-pie-chart-with-color-mapping>
+                  <div *ngFor="let item of chartConfigComponentArray"> 
+                    <h1>{{ item.titleh1 }}</h1>
+                    <h2>{{ item.titleh2 }}</h2>
+                    <hr class="separator"/>
+                    <app-example-with-source [for]='item.for' [ts]='item.ts' [html]='item.html' [css]='item.css'></app-example-with-source>
+                  </div>
                 </div>
             </div>
         </mat-sidenav-content>

@@ -4,7 +4,7 @@ import * as invariant from 'invariant';
 import { Component, OnInit } from '@angular/core';
 import { projectId, columnVisualizationIdentifierExport, dateDataSetUri } from '../../../utils/fixtures';
 import { Model, Visualization } from '@gooddata/react-components';
-import { ExampleWithExportComponent } from '../utils/example-with-export/example-with-export.component';
+import { ExampleWithExportComponent } from '../../components/utils/example-with-export/example-with-export.component';
 
 interface VisualizationBarChartProps {
   projectId: any;

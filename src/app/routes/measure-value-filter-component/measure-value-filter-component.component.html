@@ -26,16 +26,13 @@
                 </div> 
                   <h2>Measure Value Filter Component</h2> 
                   <p>This is a set of components for managing measure value filters.</p>
-                  <hr className="separator" />
+                  <hr class="separator"/>
                   <h2>Dropdown</h2>
-                  <p>This example shows the dropdown component for setting up a measure value filter.</p>
-                  <app-measure-value-filter-dropdown></app-measure-value-filter-dropdown>
-                  <p>This example shows the dropdown component for setting up a measure value filter with a measure formatted as a percentage.</p>
-                  <app-measure-value-filter-ratio-dropdown></app-measure-value-filter-ratio-dropdown>
-                  <p>This example shows the dropdown component for setting up a measure value filter with a measure shown as a percentage.</p>                  
-                  <app-measure-value-filter-percent-dropdown></app-measure-value-filter-percent-dropdown>
+                  <div *ngFor="let item of measureValueFilterComponentArray"> 
+                    <p>{{ item.content }}</p>
+                    <app-example-with-source [for]='item.for' [ts]='item.ts' [html]='item.html' [css]='item.css'></app-example-with-source>
+                  </div>
                 </div>
         </mat-sidenav-content>
     </mat-sidenav-container>
 </div> 
-

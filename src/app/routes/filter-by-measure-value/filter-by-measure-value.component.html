@@ -28,22 +28,12 @@
                 <h2>Filter by Measure Value</h2>
                 <p>Here is how you can filter the entire insight by the value of a measure. The granularity is defined by the attributes in the insight.</p>
                 <hr className="separator" />
-                <h3>Comparison and range filters</h3>
-                <p>This is the example of filtering the visualization by either one or two measure values:</p>
-                <app-measure-value-filter-examples></app-measure-value-filter-examples>
-                <h3>Filter by a measure value shown in %</h3> 
-                <p>When the visualization is filtered by a measure that is shown in %, the filter value is in the original measure scale and not in the percentage scale that is displayed in the visualization</p>
-                <app-measure-value-filter-shown-in-percent></app-measure-value-filter-shown-in-percent>
-                <h3>Filter by a measure value stacked to 100%
-                </h3>
-                <p>When the visualization is filtered by a measure that is stacked to 100%, the filter value is in the original measure scale and not in the percentage scale that is displayed in the visualization.
-                </p>
-                <app-measure-value-filter-stack-to100-percent></app-measure-value-filter-stack-to100-percent>
-                <h3>Filter a by measure value formatted in %
-                </h3>
-                <p>When the visualization is filtered by a measure that is formatted in %, the filter value is in the form of a ratio (for instance, 0.5, which is 50%) and not in the percentage scale. This applies to measures that have the percentage format set by the format measure property, calculated measures with the percentage format set in metadata catalog, and arithmetic measures with the change operator.
-                </p>
-                <app-measure-value-filter-formatted-in-percent></app-measure-value-filter-formatted-in-percent>
+
+                <div *ngFor="let item of filterByMeasureValueComponentArray"> 
+                  <h3>{{ item.title }}</h3>
+                  <p>{{ item.content }}</p>
+                  <app-example-with-source [for]='item.for' [ts]='item.ts' [html]='item.html' [css]='item.css'></app-example-with-source>
+                </div>
               </div>
             </div>
         </mat-sidenav-content>

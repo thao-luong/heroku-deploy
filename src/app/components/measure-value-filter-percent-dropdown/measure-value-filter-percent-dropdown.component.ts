@@ -199,5 +199,3 @@ export class MeasureValueFilterPercentDropdownComponent implements OnInit, OnDes
   }
 
 }
-
-
