@@ -65,6 +65,7 @@ export class DrillWithExternalDataComponent implements OnInit, OnDestroy, OnChan
   born_location: any;
   phone: any;
   registeredDate: any;
+  born_state: any;
 
   employee3rdPartyData: {
     error: null,
