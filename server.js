@@ -6,8 +6,8 @@ const app = express();
 
 // // Serve only the static files form the dist directory
 app.use(express.static(__dirname + '/dist/<name-of-app>'));
-app.use(favicon(__dirname + '/public/favicon.ico'));
-app.get('*', function(req,res) {
+app.use(favicon(path.join(__dirname, 'public'/'favicon.ico')))
+app.get('/*', function(req,res) {
     
 res.sendFile(path.join(__dirname+'/dist/<name-of-app>/index.html'));
 });

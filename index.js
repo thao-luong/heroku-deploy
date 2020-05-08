@@ -8,7 +8,7 @@ const app = express();
 app.use(express.static(__dirname + '/dist/ui-sdk-angular-examples'));
 // app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 app.use(favicon(__dirname + '/public/favicon.ico'));
-app.get('/*', function(req,res) {
+app.get('*', function(req,res) {
 
 res.sendFile(path.join(__dirname +'/dist/ui-sdk-angular-examples/index.html'));
 });
